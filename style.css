@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    background: linear-gradient(-45deg, #2d3436, #636e72, #b2bec3, #dfe6e9);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  @keyframes gradientBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 10%;
+    }
+    100% {
+      background-position: 0% 10%;
+    }
+  }
+
+  h1 {
+    font-size: 10rem;
+    margin-bottom: 10px;
+    animation: fadeIn 10s ease-out;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+    animation: fadeIn 4.5s ease-in;
+  }
+
+  .coming-soon {
+    font-size: 8rem;
+    font-weight: 600;
+    color: #ffeaa7;
+    animation: glow 10s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 1px #ffeaa7;
+    }
+    to {
+      text-shadow: 0 0 20px #fab1a0, 0 0 30px #fab1a0;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .timer {
+    margin: 25px 0;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+
+  .email-box {
+    margin-top: 20px;
+  }
+
+  input[type="email"] {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    width: 250px;
+    max-width: 80%;
+    margin-right: 10px;
+  }
+
+  button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: #fab1a0;
+    color: #2d3436;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #fd79a8;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 15px;
+    font-size: 0.8rem;
+    color: #dfe6e9;
+  }
+
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 1rem;
+    }
+    .coming-soon {
+      font-size: 1.5rem;
+    }
+  }
